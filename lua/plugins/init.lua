@@ -72,6 +72,13 @@ return {
       })
     end
   },
+  {
+    'ThePrimeagen/harpoon',
+    config = function()
+      require("harpoon").setup()
+    end,
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

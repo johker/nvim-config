@@ -9,6 +9,10 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+-- Telescope
+vim.keymap.set('n', '<leader>ps', function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)
 
 -- Nvim DAP
 map("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
@@ -29,3 +33,15 @@ map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugge
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { noremap = true, silent = true })
+
+
+-- Hapoon
+-- local mark = require("harpoon.mark")
+-- local ui = require("harpoon.ui")
+-- --
+-- vim.keymap.set("n","<leader>a",mark.add_file)
+-- vim.keymap.set("n","<C-e>",ui.toggle_quick_menu)
+-- vim.keymap.set("n","<C-h>",function ()ui.nav_file(1) end)
+-- vim.keymap.set("n","<C-t>",function ()ui.nav_file(2) end)
+-- vim.keymap.set("n","<C-n>",function ()ui.nav_file(3) end)
+-- vim.keymap.set("n","<C-s>",function ()ui.nav_file(4) end)
