@@ -271,7 +271,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
   "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-
   require "plugins.telescope",
   require "plugins.gitsigns",
   require "plugins.which-key",
@@ -284,15 +283,8 @@ require("lazy").setup({
   require "plugins.treesitter",
   require "plugins.mini",
   require "plugins.todo-comments",
+  require "plugins.harpoon",
 
-  {
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
