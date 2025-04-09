@@ -1,5 +1,6 @@
 require "core.options"
 require "core.keymaps"
+require "core.terminal"
 
 --    :Lazy update
 --
@@ -24,25 +25,24 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  To update plugins you can run
 -- NOTE: Here is where you install your plugins.
-require "plugins.terminal"
 
 require("lazy").setup({
 
-  "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-  require "plugins.key-analyzer",
-  require "plugins.telescope",
+  require "plugins.conform",
   require "plugins.gitsigns",
-  require "plugins.which-key",
+  require "plugins.harpoon",
+  require "plugins.key-analyzer",
   require "plugins.lazydev",
   require "plugins.lsp",
-  require "plugins.conform",
-  require "plugins.nvim-cmp",
-  require "plugins.tokio",
-  require "plugins.neo-tree",
-  require "plugins.treesitter",
   require "plugins.mini",
+  require "plugins.neo-tree",
+  require "plugins.nvim-cmp",
+  require "plugins.nvim-sleuth",
+  require "plugins.telescope",
   require "plugins.todo-comments",
-  require "plugins.harpoon",
+  require "plugins.tokio",
+  require "plugins.treesitter",
+  require "plugins.which-key",
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
