@@ -24,9 +24,12 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  To update plugins you can run
 -- NOTE: Here is where you install your plugins.
+require "plugins.terminal"
+
 require("lazy").setup({
 
   "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+  require "plugins.key-analyzer",
   require "plugins.telescope",
   require "plugins.gitsigns",
   require "plugins.which-key",

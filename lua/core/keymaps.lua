@@ -5,14 +5,14 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Remap Escape key
+-- It is remapped on system level
+-- echo "setxkbmap -option caps:escape" >> ~/.zshrc
 
 -- Move highlighted lines with capital jk vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Keep cursor in the middle when  ...
--- ...moving line below at the end of current line
-vim.keymap.set("n", "J", "mzJ`z")
--- ..half page jumping
+-- ...moving line below at the end of current line vim.keymap.set("n", "J", "mzJ`z") ..half page jumping
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- ..searching
