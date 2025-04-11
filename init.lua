@@ -40,9 +40,10 @@ require("lazy").setup({
   require "plugins.nvim-sleuth",
   require "plugins.telescope",
   require "plugins.todo-comments",
-  require "plugins.tokio",
+  --require "plugins.tokio",
+  require "plugins.rosepine",
   require "plugins.treesitter",
-  require "plugins.which-key",
+  --require "plugins.which-key",
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and

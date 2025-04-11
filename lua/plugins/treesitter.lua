@@ -8,6 +8,8 @@ return { -- Highlight, edit, and navigate code
       "bash",
       "c",
       "diff",
+      "dockerfile",
+      "haskell",
       "html",
       "lua",
       "luadoc",
@@ -16,6 +18,7 @@ return { -- Highlight, edit, and navigate code
       "query",
       "vim",
       "vimdoc",
+      "yaml",
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
