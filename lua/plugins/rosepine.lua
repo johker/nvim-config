@@ -32,6 +32,7 @@ return { -- You can easily change to a different colorscheme.
     vim.cmd.colorscheme "rose-pine"
     -- Your transparency settings
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   end,
 }
