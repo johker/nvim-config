@@ -9,6 +9,7 @@ return { -- You can easily change to a different colorscheme.
   config = function()
     ---@diagnostic disable-next-line: missing-fields
     require("rose-pine").setup {
+
       styles = {
         undercurl = true,
         underline = true,
@@ -24,10 +25,13 @@ return { -- You can easily change to a different colorscheme.
         palette_overrides = {},
         overrides = {},
         dim_inactive = false,
-        transparent_mode = true,
+        transparency = true,
       },
     }
     -- Load the colorscheme here.
     vim.cmd.colorscheme "rose-pine"
+    -- Your transparency settings
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   end,
 }

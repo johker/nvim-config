@@ -2,6 +2,7 @@ return {
   {
     "mfussenegger/nvim-dap",
     dependencies = {
+      "leoluz/nvim-dap-go",
       "rcarriga/nvim-dap-ui",
       "theHamsta/nvim-dap-virtual-text",
       "nvim-neotest/nvim-nio",
@@ -12,6 +13,29 @@ return {
       local ui = require "dapui"
 
       require("dapui").setup()
+
+      dap.adapters.haskell = {
+        type = "executable",
+        command = "haskell-debug-adapter",
+        args = {},
+      }
+
+      dap.configurations.haskell = {
+        {
+          type = "haskell",
+          request = "launch",
+          name = "Debug Haskell",
+          workspace = "${workspaceFolder}",
+          startup = "${file}",
+          stopOnEntry = true,
+          logFile = "hda.log",
+          logLevel = "INFO",
+          ghciEnv = vim.empty_dict(),
+          ghciPrompt = "λ> ",
+          ghciInitialPrompt = "λ> ",
+          ghciCmd = "cabal repl",
+        },
+      }
 
       vim.keymap.set("n", "<space>b", dap.toggle_breakpoint)
       vim.keymap.set("n", "<space>gb", dap.run_to_cursor)
