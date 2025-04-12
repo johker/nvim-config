@@ -34,6 +34,7 @@ require("lazy").setup({
   require "plugins.haskell-tools",
   require "plugins.key-analyzer",
   require "plugins.lazydev",
+  require "plugins.lazygit",
   require "plugins.lsp",
   require "plugins.lualine",
   require "plugins.mini",
