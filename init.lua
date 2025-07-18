@@ -28,6 +28,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
+  require "plugins.avante",
   require "plugins.conform",
   require "plugins.gitsigns",
   require "plugins.harpoon",
